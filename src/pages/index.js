@@ -1,8 +1,8 @@
 import React from 'react';
+import '../styles/index.css';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Intro from '../components/Sections/Intro/Intro';
+import Layout from '../components/UI/Layout/layout';
+import Banner from '../components/Sections/Banner/Banner';
 import About from '../components/Sections/About/About';
 import Projects from '../components/Sections/Projects/Projects';
 import Skills from '../components/Sections/Skills/Skills';
@@ -10,8 +10,7 @@ import Contacts from '../components/Sections/Contacts/Contacts';
 
 const IndexPage = () => (
     <Layout>
-        <SEO title="Home" />
-        <Intro />
+        <Banner />
         <About />
         <Projects />
         <Skills />

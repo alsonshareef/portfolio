@@ -1,7 +1,7 @@
 import React from 'react';
-import './Intro.css';
+import './Banner.css';
 
-const Intro = () => {
+const Banner = () => {
     return (
         <section>
             <h1>Hi, I'm Alson</h1>
@@ -10,4 +10,4 @@ const Intro = () => {
     );
 };
 
-export default Intro;
+export default Banner;
