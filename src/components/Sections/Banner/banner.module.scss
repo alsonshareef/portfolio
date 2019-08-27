@@ -1,0 +1,17 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.bannerTitle {
+    font-size: 4rem;
+}
+
+.bannerSubTitle {
+    padding: 0.2rem 1rem;
+    margin-bottom: 2rem;
+}
