@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/index.css';
+import '../styles/index.scss';
 
 import Layout from '../components/UI/Layout/layout';
 import Banner from '../components/Sections/Banner/Banner';
