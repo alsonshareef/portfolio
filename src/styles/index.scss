@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 * {
+    box-sizing: border-box;
+}
+
+// GLOBAL
+
+body {
+    margin: 0;
+    height: 100%;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
     margin: 0;
 }
 
-body {
-    background: #444;
+a {
+    text-decoration: none;
 }
