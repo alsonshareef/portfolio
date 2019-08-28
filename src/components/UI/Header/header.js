@@ -4,7 +4,7 @@ import headerStyles from './header.module.scss';
 const Header = () => (
     <header>
         <nav className={headerStyles.navbar}>
-            <ul>
+            <ul className={headerStyles.navbarList}>
                 <li>
                     <a href="#">Home</a>
                 </li>

@@ -1,5 +1,16 @@
 .navbar {
-    width: 100%;
     position: fixed;
-    z-index: 2;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbarList {
+    display: flex;
+    padding: 10px;
+}
+
+.navbarList a {
+    padding: 0 5px;
 }
