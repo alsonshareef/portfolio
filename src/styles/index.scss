@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 // GLOBAL
 
+html {
+    font-size: 100%;
+}
+
+@media (max-width: 55em) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 30em) {
+    html {
+        font-size: 60%;
+    }
+}
+
 body {
-    margin: 0;
     height: 100%;
     line-height: 1.5;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -21,4 +39,8 @@ h3 {
 
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
