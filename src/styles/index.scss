@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import './variables';
+
+// GLOBAL
 
 * {
     margin: 0;
@@ -6,41 +9,34 @@
     box-sizing: border-box;
 }
 
-// GLOBAL
-
 html {
-    font-size: 100%;
-}
-
-@media (max-width: 55em) {
-    html {
-        font-size: 70%;
-    }
-}
-
-@media (max-width: 30em) {
-    html {
-        font-size: 60%;
-    }
+    font-size: 62.5%;
 }
 
 body {
     height: 100%;
+    font-size: $default-font-size;
     line-height: 1.5;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
-h1,
+h1 {
+    font-weight: 700;
+}
+
 h2,
 h3 {
-    margin: 0;
+    font-weight: 400;
 }
 
 a {
+    color: black;
     text-decoration: none;
 }
 
 ul {
     list-style: none;
 }
+
+// MEDIA QUERIES
