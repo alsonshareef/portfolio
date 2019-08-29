@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -5,7 +7,7 @@
     align-items: center;
     height: 100vh;
     min-height: 100vh;
-    padding: 16px;
+    padding: 4rem 2rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,10 +17,11 @@
 }
 
 .bannerTitle {
-    font-size: 4rem;
+    font-size: $big-font-size;
 }
 
 .bannerSubTitle {
+    font-size: $mid-font-size;
     padding: 0.2rem 1rem;
     margin-bottom: 2rem;
 }
