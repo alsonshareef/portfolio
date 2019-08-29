@@ -1,5 +1,11 @@
+@import '../../../styles/variables';
+
+// NAVBAR
+
 .navbar {
+    font-size: $default-font-size;
     position: fixed;
+    z-index: 2;
     top: 0;
     width: 100%;
     display: flex;
