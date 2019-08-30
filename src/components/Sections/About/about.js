@@ -10,6 +10,7 @@ const About = () => {
             <a
                 href="https://github.com/alsonshareef"
                 target="_blank"
+                rel="noopener noreferrer"
                 className={aboutStyles.icon}
             >
                 <FaGithub />
@@ -17,6 +18,7 @@ const About = () => {
             <a
                 href="https://www.linkedin.com/in/alsonshareef/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className={aboutStyles.icon}
             >
                 <FaLinkedin />
