@@ -6,19 +6,19 @@ const Header = () => (
         <nav className={headerStyles.navbar}>
             <ul className={headerStyles.navbarList}>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="/">About</a>
                 </li>
                 <li>
-                    <a href="#">Projects</a>
+                    <a href="/">Projects</a>
                 </li>
                 <li>
-                    <a href="#">Skills</a>
+                    <a href="/">Skills</a>
                 </li>
                 <li>
-                    <a href="#">Contacts</a>
+                    <a href="/">Contacts</a>
                 </li>
             </ul>
         </nav>
