@@ -1,27 +1,27 @@
-@import '../../../styles/variables';
+// @import '../../../styles/variables';
 
-.banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    min-height: 100vh;
-    padding: 4rem 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
+// .banner {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     min-height: 100vh;
+//     padding: 4rem 2rem;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: -1;
+// }
 
-.bannerTitle {
-    font-size: $big-font-size;
-}
+// .bannerTitle {
+//     font-size: $big-font-size;
+// }
 
-.bannerSubTitle {
-    font-size: $mid-font-size;
-    padding: 0.2rem 1rem;
-    margin-bottom: 2rem;
-}
+// .bannerSubTitle {
+//     font-size: $mid-font-size;
+//     padding: 0.2rem 1rem;
+//     margin-bottom: 2rem;
+// }

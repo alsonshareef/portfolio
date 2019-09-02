@@ -1,16 +1,16 @@
-@mixin easeOut {
-    transition: all 0.3s ease-in-out;
-}
+// @mixin easeOut {
+//     transition: all 0.3s ease-in-out;
+// }
 
-.aboutPage {
-    margin-top: 100vh;
-}
+// .aboutPage {
+//     margin-top: 100vh;
+// }
 
-.icon {
-    padding: 0.2rem;
+// .icon {
+//     padding: 0.2rem;
 
-    &:hover {
-        opacity: 0.8;
-        @include easeOut();
-    }
-}
+//     &:hover {
+//         opacity: 0.8;
+//         @include easeOut();
+//     }
+// }
