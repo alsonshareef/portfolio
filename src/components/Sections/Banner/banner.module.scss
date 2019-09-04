@@ -1,27 +1,46 @@
-// @import '../../../styles/variables';
+@import '../../../styles/variables';
 
-// .banner {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
-//     min-height: 100vh;
-//     padding: 4rem 2rem;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     z-index: -1;
-// }
+.banner {
+    // background: blue;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+}
 
-// .bannerTitle {
-//     font-size: $big-font-size;
-// }
+.container {
+    // background: red;
+    margin: 0 8%;
+    padding: 0 5px;
+}
 
-// .bannerSubTitle {
-//     font-size: $mid-font-size;
-//     padding: 0.2rem 1rem;
-//     margin-bottom: 2rem;
-// }
+.bannerHeading {
+    font-size: $big-font-size;
+    text-align: left;
+    animation: fadeInLeft 0.8s;
+
+    .text {
+        font-size: 0.7em;
+        font-weight: 400;
+        margin-bottom: 3rem;
+        animation: fadeInLeft 1s;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
