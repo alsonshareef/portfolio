@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 const About = () => {
     return (
         <section className={aboutStyles.aboutPage}>
-            About
+            <h2>About</h2>
             <a
                 href="https://github.com/alsonshareef"
                 target="_blank"
