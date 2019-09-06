@@ -1,7 +1,8 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .banner {
-    background: blue;
+    // background: blue;
     position: fixed;
     height: 100vh;
     top: 0;
@@ -15,16 +16,29 @@
 }
 
 .container {
-    background: red;
+    // background: red;
     margin: 0 8%;
     padding: 0 5px;
 }
 
 .bannerHeading {
-    font-size: $big-font-size;
     text-align: left;
 
-    .text {
+    @include respond(phone) {
+        text-align: center;
+    }
+
+    .headingMain {
+        margin-bottom: 0.5rem;
+
+        span {
+            @include respond(phone) {
+                display: block;
+            }
+        }
+    }
+
+    .headingText {
         font-size: 0.7em;
         font-weight: 400;
         margin-bottom: 3rem;
