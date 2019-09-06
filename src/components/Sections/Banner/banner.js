@@ -24,11 +24,15 @@ const Banner = () => {
         <div className={bannerStyles.banner}>
             <div className={bannerStyles.container}>
                 <h1 className={bannerStyles.bannerHeading}>
-                    <animated.p style={fadeInLeft(0)}>
+                    <animated.p
+                        className={bannerStyles.headingMain}
+                        style={fadeInLeft(0)}
+                    >
                         Hi, my name is <span>Alson Shareef</span>
                     </animated.p>
+
                     <animated.p
-                        className={bannerStyles.text}
+                        className={bannerStyles.headingText}
                         style={fadeInLeft(2000)}
                     >
                         I'm a Fullstack Web Developer with a passion for the
