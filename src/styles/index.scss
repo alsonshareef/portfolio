@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import './variables';
+@import './mixins';
 
 // // GLOBAL
 
@@ -10,12 +11,29 @@
 }
 
 html {
-    font-size: 62.5%;
+    @include respond(big-desktop) {
+        font-size: 170%; // 1rem = 12px => 12/16 * 100 = 75%%
+    }
+
+    @include respond(tab-land) {
+        font-size: 140%; // 1rem = 9px => 9/16 * 100 = 56.25%
+    }
+
+    @include respond(tab-port) {
+        font-size: 125%; // 1rem = 8px => 8/16 * 100 = 50%
+    }
+
+    @include respond(phone) {
+        font-size: 110%; // 1rem = 7px => 7/16 * 100 = 43.75%
+    }
+
+    @include respond(phone-xs) {
+        font-size: 90%; // 1rem = 7px => 7/16 * 100 = 43.75%
+    }
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: $default-font-size;
     height: 100%;
     line-height: 1.5;
     text-align: center;
@@ -30,4 +48,6 @@ ul {
     list-style: none;
 }
 
-// // MEDIA QUERIES
+h2 {
+    text-transform: uppercase;
+}
