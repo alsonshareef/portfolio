@@ -3,12 +3,11 @@
 // // NAVBAR
 
 .navbar {
-    background: salmon;
+    // background: salmon;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    font-size: $default-font-size;
     display: flex;
     justify-content: flex-end;
 }
