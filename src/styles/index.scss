@@ -11,24 +11,26 @@
 }
 
 html {
+    font-size: 162.5%; // 1rem = 26px  26/16 * 100 = 162.5%
+
     @include respond(big-desktop) {
-        font-size: 170%; // 1rem = 12px => 12/16 * 100 = 75%%
+        font-size: 168.75%; // 1rem = 27px  27/16 * 100 = 168.75%
     }
 
     @include respond(tab-land) {
-        font-size: 140%; // 1rem = 9px => 9/16 * 100 = 56.25%
+        font-size: 150%; // 1rem = 24px  24/16 * 100 = 150%
     }
 
     @include respond(tab-port) {
-        font-size: 125%; // 1rem = 8px => 8/16 * 100 = 50%
+        font-size: 125%; // 1rem = 20px  20/16 * 100 = 125%
     }
 
     @include respond(phone) {
-        font-size: 110%; // 1rem = 7px => 7/16 * 100 = 43.75%
+        font-size: 106.25%; // 1rem = 17px  17/16 * 100 = 106.25%
     }
 
     @include respond(phone-xs) {
-        font-size: 90%; // 1rem = 7px => 7/16 * 100 = 43.75%
+        font-size: 93.75%; // 1rem = 15px  15/16 * 100 = 93.75%
     }
 }
 
