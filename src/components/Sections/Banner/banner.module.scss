@@ -29,8 +29,6 @@
     }
 
     .headingMain {
-        margin-bottom: 0.5rem;
-
         span {
             @include respond(phone) {
                 display: block;
