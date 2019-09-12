@@ -2,9 +2,9 @@ import React from 'react';
 import headerStyles from './header.module.scss';
 
 const Header = () => (
-    <header>
-        <nav className={headerStyles.navbar}>
-            <ul className={headerStyles.navbarList}>
+    <header className={headerStyles.navbar}>
+        <nav>
+            <ul className={headerStyles.navbarItems}>
                 <li>
                     <a href="/">Home</a>
                 </li>
