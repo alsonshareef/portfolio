@@ -1,4 +1,3 @@
-@import '../../../styles/variables';
 @import '../../../styles/mixins';
 
 .banner {
@@ -29,14 +28,17 @@
     }
 
     .headingMain {
+        display: block;
         span {
             @include respond(phone) {
                 display: block;
+                margin-bottom: 0.3rem;
             }
         }
     }
 
     .headingText {
+        display: block;
         font-size: 0.7em;
         font-weight: 400;
         margin-bottom: 3rem;
