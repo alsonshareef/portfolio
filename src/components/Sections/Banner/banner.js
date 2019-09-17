@@ -21,23 +21,23 @@ const Banner = () => {
         });
 
     return (
-        <div className={bannerStyles.banner}>
+        <div id="banner" className={bannerStyles.banner}>
             <div className={bannerStyles.container}>
                 <h1 className={bannerStyles.bannerHeading}>
-                    <animated.p
+                    <animated.span
                         className={bannerStyles.headingMain}
                         style={fadeInLeft(0)}
                     >
                         Hi, my name is <span>Alson Shareef</span>
-                    </animated.p>
+                    </animated.span>
 
-                    <animated.p
+                    <animated.span
                         className={bannerStyles.headingText}
                         style={fadeInLeft(2000)}
                     >
                         I'm a Fullstack Web Developer with a passion for the
                         JavaScript ecosystem.
-                    </animated.p>
+                    </animated.span>
                 </h1>
             </div>
         </div>
