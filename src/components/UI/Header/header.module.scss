@@ -1,17 +1,21 @@
-@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 // NAVBAR
 
 .navbar {
-    // background: salmon;
+    background: salmon;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    font-size: 0.7em;
+    font-size: 0.8em;
     z-index: 2;
     display: flex;
     justify-content: flex-end;
+
+    @include respond(phone) {
+        font-size: 0.9em;
+    }
 }
 
 .navbarItems {
@@ -20,6 +24,11 @@
 
     li {
         padding: 0 0.3rem;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        justify-content: space-around;
     }
 }
 
