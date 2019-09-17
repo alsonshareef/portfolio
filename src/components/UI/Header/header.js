@@ -1,24 +1,36 @@
 import React from 'react';
 import headerStyles from './header.module.scss';
 
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 const Header = () => (
-    <header className={headerStyles.navbar}>
-        <nav>
+    <header>
+        <nav className={headerStyles.navbar}>
             <ul className={headerStyles.navbarItems}>
                 <li>
-                    <a href="/">Home</a>
+                    <AnchorLink offset={() => 900} href="#top">
+                        Home
+                    </AnchorLink>
                 </li>
                 <li>
-                    <a href="/">About</a>
+                    <AnchorLink offset={() => 50} href="#about">
+                        About
+                    </AnchorLink>
                 </li>
                 <li>
-                    <a href="/">Projects</a>
+                    <AnchorLink offset={() => 50} href="#projects">
+                        Projects
+                    </AnchorLink>
                 </li>
                 <li>
-                    <a href="/">Skills</a>
+                    <AnchorLink offset={() => 50} href="#skills">
+                        Skills
+                    </AnchorLink>
                 </li>
                 <li>
-                    <a href="/">Contacts</a>
+                    <AnchorLink offset={() => 50} href="#contacts">
+                        Contacts
+                    </AnchorLink>
                 </li>
             </ul>
         </nav>
