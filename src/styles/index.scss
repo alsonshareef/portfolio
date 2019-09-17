@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import './variables';
+@import './_typography.scss';
 @import './mixins';
 
 // GLOBAL
@@ -35,21 +34,5 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     height: 100%;
-    line-height: 1.5;
-    text-align: center;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-h2 {
-    text-transform: uppercase;
 }
