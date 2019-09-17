@@ -10,6 +10,7 @@ import Contacts from '../components/Sections/Contacts/contacts';
 
 const IndexPage = () => (
     <Layout>
+        <div id="top" />
         <Banner />
         <About />
         <Projects />
