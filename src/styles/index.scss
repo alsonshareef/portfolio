@@ -3,13 +3,16 @@
 
 // GLOBAL
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
+    box-sizing: border-box;
     font-size: 162.5%; // 1rem = 26px  26/16 * 100 = 162.5%
 
     @include respond(big-desktop) {
