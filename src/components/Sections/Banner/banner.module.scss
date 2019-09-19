@@ -17,7 +17,7 @@
 .container {
     // background: red;
     margin: 0 8%;
-    padding: 0 5px;
+    padding: 0 0.5em;
 }
 
 .bannerHeading {
@@ -32,15 +32,15 @@
         span {
             @include respond(phone) {
                 display: block;
-                margin-bottom: 0.3rem;
+                margin-bottom: 0.2em;
             }
         }
     }
 
     .headingText {
         display: block;
-        font-size: 0.7em;
+        font-size: 1.3rem;
         font-weight: 400;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5em;
     }
 }
