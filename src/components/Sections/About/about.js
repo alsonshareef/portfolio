@@ -7,6 +7,7 @@ const About = () => {
     return (
         <section id="about" className={aboutStyles.aboutPage}>
             <h2>About</h2>
+            <p>dhsoidhaioshdoiahsdiohaoishdoaisdh</p>
             <a
                 href="https://github.com/alsonshareef"
                 target="_blank"
