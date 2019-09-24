@@ -2,8 +2,8 @@
 
 // FONT SIZES
 
-$default-font-size: 0.9rem;
-$mid-font-size: 1.5rem;
+$default-font-size: 0.8rem;
+$mid-font-size: 1.65rem;
 $big-font-size: 2rem;
 
 body {
@@ -19,6 +19,7 @@ h1 {
 h2 {
     font-size: $mid-font-size;
     text-transform: uppercase;
+    margin-bottom: 0.5em;
 }
 
 p {
