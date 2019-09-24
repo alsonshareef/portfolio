@@ -35,8 +35,8 @@ const Banner = () => {
                         className={bannerStyles.headingText}
                         style={fadeInLeft(2000)}
                     >
-                        I'm a Fullstack Web Developer with a passion for the
-                        JavaScript ecosystem.
+                        I enjoy problem-solving and building meaningful
+                        solutions for the web.
                     </animated.span>
                 </h1>
             </div>
