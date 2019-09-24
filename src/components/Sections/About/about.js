@@ -10,7 +10,11 @@ const About = () => {
             <div className={aboutStyles.container}>
                 <div className={aboutStyles.sidebar}>
                     {/* Replace img element with gatsby-image. */}
-                    <img src="https://i.pravatar.cc/300" alt=""></img>
+                    <img
+                        className={aboutStyles.sidebar__image}
+                        src="https://i.pravatar.cc/300"
+                        alt=""
+                    ></img>
                     <ul className={aboutStyles.sidebar__socials}>
                         <li className={aboutStyles.sidebar__socials__items}>
                             <a
@@ -39,13 +43,21 @@ const About = () => {
                     </ul>
                 </div>
 
-                <div className={aboutStyles.__main}>
-                    <h3 className={aboutStyles.main__name}>Alson Shareef</h3>
-                    <p className={aboutStyles.main__position}>
-                        Full-Stack Developer
+                <div className={aboutStyles.main}>
+                    <p className={aboutStyles.main__info}>
+                        I'm a passionate Full-Stack Web Developer focused on
+                        consistent learning and pushing my boundaries to become
+                        a better problem-solver.
                     </p>
                     <p className={aboutStyles.main__info}>
-                        (Info about me goes here.)
+                        I have been primarly focused on learning the JavaScript
+                        ecosystem and how to utilise these technologies to build
+                        clean, perfomant front-ends and robust back-ends.
+                    </p>
+                    <p className={aboutStyles.main__info}>
+                        In the sections below you will see the technologies I
+                        have been focused on learning as well as the projects I
+                        have built in order to properly understand them.
                     </p>
                 </div>
             </div>
