@@ -1,39 +1,32 @@
-@import '../../../styles/mixins';
+// @import '../../../styles/mixins';
 
-// NAVBAR
-
-.navbar {
-    background: salmon;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    font-size: 0.8rem;
-    z-index: 2;
-    display: flex;
-    justify-content: flex-end;
-
-    @include respond(phone) {
-        font-size: 0.9rem;
+// // NAVBAR
+.navbar__custom {
+    div {
+        button {
+            /* Removes default button styles on nav-burger */
+            background: none;
+            border: 0;
+        }
     }
 }
 
-.navbarItems {
-    display: flex;
-    padding: 10px;
+// .navbarItems {
+//     display: flex;
+//     padding: 10px;
 
-    li {
-        padding: 0 0.3em;
-    }
+//     li {
+//         padding: 0 0.3em;
+//     }
 
-    @include respond(phone) {
-        width: 100%;
-        justify-content: space-around;
-    }
-}
+//     @include respond(phone) {
+//         width: 100%;
+//         justify-content: space-around;
+//     }
+// }
 
-.navbarItems a {
-    &:hover {
-        background: white;
-    }
-}
+// .navbarItems a {
+//     &:hover {
+//         background: white;
+//     }
+// }
