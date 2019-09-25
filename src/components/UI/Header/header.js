@@ -19,6 +19,7 @@ const Header = () => {
                 <div className="navbar-brand">
                     <AnchorLink
                         className="navbar-item is-size-4-touch is-size-3-desktop"
+                        offset={() => 900}
                         href="#top"
                     >
                         Alson Shareef
