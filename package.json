@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "bulma": "^0.7.5",
     "gatsby": "^2.13.51",
     "gatsby-plugin-sass": "^2.1.12",
     "node-sass": "^4.12.0",
