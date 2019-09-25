@@ -17,9 +17,12 @@ const Header = () => {
                 ].join(' ')}
             >
                 <div className="navbar-brand">
-                    <a className="navbar-item is-size-4" href="#top">
+                    <AnchorLink
+                        className="navbar-item is-size-4-touch is-size-3-desktop"
+                        href="#top"
+                    >
                         Alson Shareef
-                    </a>
+                    </AnchorLink>
 
                     <button
                         onClick={() => toggleActive(!active)}
@@ -40,7 +43,7 @@ const Header = () => {
                     id="navMenu"
                     className={active ? 'navbar-menu is-active' : 'navbar-menu'}
                 >
-                    <div className="navbar-end is-size-6">
+                    <div className="navbar-end is-size-6-touch is-size-5-desktop">
                         <AnchorLink
                             className="navbar-item is-tab is-hoverable"
                             offset={() => 900}
