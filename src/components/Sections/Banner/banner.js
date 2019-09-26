@@ -1,47 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
 import bannerStyles from './banner.module.scss';
 
-import { useSpring, animated } from 'react-spring';
+import sr from '../../../scrollReveal';
 
-const Banner = () => {
-    const fadeInLeft = delay =>
-        useSpring({
-            config: {
-                duration: 1250,
-            },
+class Banner extends Component {
+    // Applies scroll reveal functionality to heading after mounting.
+    componentDidMount = () => {
+        // Scroll reveal config for h1
+        const h1Config = {
+            ...this.props.srDefaultConfig,
+            reset: true,
+            delay: 500,
+            origin: window.innerWidth > 768 ? 'left' : 'bottom',
+        };
 
-            from: {
-                opacity: 0,
-                transform: 'translateX(-40px)',
-            },
+        sr.reveal('.title', h1Config);
 
-            opacity: 1,
-            transform: 'translateX(0px)',
-            delay: delay,
-        });
+        // Scroll reveal config for h2
+        const h2config = {
+            ...this.props.srDefaultConfig,
+            reset: true,
+            delay: 1400,
+            origin: window.innerWidth > 768 ? 'left' : 'bottom',
+        };
 
-    return (
-        <div id="banner" className={bannerStyles.banner}>
-            <div className={bannerStyles.container}>
-                <h1 className={bannerStyles.bannerHeading}>
-                    <animated.span
-                        className={bannerStyles.headingMain}
-                        style={fadeInLeft(0)}
-                    >
-                        Hi, my name is <span>Alson Shareef</span>
-                    </animated.span>
+        sr.reveal('.subtitle', h2config);
+    };
 
-                    <animated.span
-                        className={bannerStyles.headingText}
-                        style={fadeInLeft(2000)}
-                    >
-                        I enjoy problem-solving and building meaningful
-                        solutions for the web.
-                    </animated.span>
-                </h1>
+    render() {
+        return (
+            <div
+                id="banner"
+                className={['hero', 'is-fullheight', bannerStyles.banner].join(
+                    ' '
+                )}
+            >
+                <div className={'hero-body'}>
+                    <div className="container has-text-centered-mobile">
+                        <h1 className="title is-size-3-mobile is-size-2-tablet is-size-1-desktop">
+                            Hi, my name is{' '}
+                            <span className={bannerStyles.headingMain__name}>
+                                Alson Shareef
+                            </span>
+                        </h1>
+
+                        <h2 className="subtitle is-size-5-mobile is-size-4-tablet is-size-3-desktop">
+                            I enjoy problem-solving and building meaningful
+                            solutions for the web.
+                        </h2>
+                    </div>
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default Banner;
