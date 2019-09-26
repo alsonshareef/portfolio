@@ -55,7 +55,7 @@ const Header = () => {
                     <div className="navbar-end is-size-6-touch is-size-5-desktop">
                         <AnchorLink
                             className="navbar-item is-tab"
-                            onClick={() => toggleActive(!active)}
+                            onClick={() => toggleActive(false)}
                             offset={() => 900}
                             href="#top"
                         >
@@ -64,7 +64,7 @@ const Header = () => {
 
                         <AnchorLink
                             className="navbar-item is-tab"
-                            onClick={() => toggleActive(!active)}
+                            onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#about"
                         >
@@ -73,7 +73,7 @@ const Header = () => {
 
                         <AnchorLink
                             className="navbar-item is-tab"
-                            onClick={() => toggleActive(!active)}
+                            onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#projects"
                         >
@@ -82,7 +82,7 @@ const Header = () => {
 
                         <AnchorLink
                             className="navbar-item is-tab"
-                            onClick={() => toggleActive(!active)}
+                            onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#skills"
                         >
@@ -91,7 +91,7 @@ const Header = () => {
 
                         <AnchorLink
                             className="navbar-item is-tab"
-                            onClick={() => toggleActive(!active)}
+                            onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#contacts"
                         >
