@@ -12,7 +12,7 @@ import {
 } from 'react-icons/io';
 
 const Header = () => {
-    // Tracks active state of navbar-burger button.
+    // Tracks active state of navbar-burger button
     const [active, toggleActive] = useState(false);
 
     return (
