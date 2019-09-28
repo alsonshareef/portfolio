@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import headerStyles from './header.module.scss';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import {
+    IoIosHome,
+    IoMdInformationCircle,
+    IoIosDocument,
+    IoIosListBox,
+    IoIosStats,
+    IoMdCall,
+} from 'react-icons/io';
 
 const Header = () => {
     // Tracks active state of navbar-burger button.
@@ -54,48 +62,75 @@ const Header = () => {
                 >
                     <div className="navbar-end is-size-6-touch is-size-5-desktop">
                         <AnchorLink
-                            className="navbar-item is-tab"
+                            className="navbar-item "
                             onClick={() => toggleActive(false)}
                             offset={() => 900}
                             href="#top"
                         >
-                            Home
+                            <span className="icon">
+                                <IoIosHome />
+                            </span>
+                            <span>Home</span>
                         </AnchorLink>
 
                         <AnchorLink
-                            className="navbar-item is-tab"
+                            className="navbar-item "
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#about"
                         >
-                            About
+                            <span className="icon">
+                                <IoMdInformationCircle />
+                            </span>
+                            <span>About</span>
                         </AnchorLink>
 
                         <AnchorLink
-                            className="navbar-item is-tab"
+                            className="navbar-item "
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#projects"
                         >
-                            Projects
+                            <span className="icon">
+                                <IoIosListBox />
+                            </span>
+                            <span>Projects</span>
                         </AnchorLink>
 
                         <AnchorLink
-                            className="navbar-item is-tab"
+                            className="navbar-item "
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#skills"
                         >
-                            Skills
+                            <span className="icon">
+                                <IoIosStats />
+                            </span>
+                            <span>Skills</span>
                         </AnchorLink>
 
                         <AnchorLink
-                            className="navbar-item is-tab"
+                            className="navbar-item "
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#contacts"
                         >
-                            Contacts
+                            <span className="icon">
+                                <IoMdCall />
+                            </span>
+                            <span>Contacts</span>
+                        </AnchorLink>
+
+                        <AnchorLink
+                            className="navbar-item "
+                            onClick={() => toggleActive(false)}
+                            offset={() => 50}
+                            href="#"
+                        >
+                            <span className="icon">
+                                <IoIosDocument />
+                            </span>
+                            <span>Resume</span>
                         </AnchorLink>
                     </div>
                 </div>
