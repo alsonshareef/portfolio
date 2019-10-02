@@ -1,38 +1,24 @@
 @import '../../../styles/mixins';
 
 .about__page {
-    background: rebeccapurple;
+    // background: lightseagreen;
+    padding-top: 5.5em;
     margin-top: 100vh;
-    height: 90vh;
+    min-height: 95vh;
 
-    .container {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        display: flex;
-        padding: 1em;
+    .title {
+        margin-bottom: 2.5rem;
+    }
 
-        @include respond(phone) {
-            flex-direction: column;
-        }
+    .socials {
+        margin-top: 1em;
+    }
 
-        .sidebar {
-            &__socials {
-                display: flex;
-                // border: solid red 2px;
-                justify-content: center;
+    .textColumn {
+        margin-right: 1.5em;
 
-                &__items {
-                    margin: 0 0.5em;
-
-                    &__link {
-                        opacity: 0.8;
-
-                        &:hover,
-                        &:focus {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
+        @include respond(mobile) {
+            margin-right: 0;
         }
     }
 }
