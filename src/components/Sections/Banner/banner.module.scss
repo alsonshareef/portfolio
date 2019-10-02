@@ -3,44 +3,9 @@
 .banner {
     // background: blue;
     position: fixed;
-    height: 100vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     z-index: -1;
-}
-
-.container {
-    // background: red;
-    margin: 0 8%;
-    padding: 0 0.5em;
-}
-
-.bannerHeading {
-    text-align: left;
-
-    @include respond(phone) {
-        text-align: center;
-    }
-
-    .headingMain {
-        display: block;
-        span {
-            @include respond(phone) {
-                display: block;
-                margin-bottom: 0.2em;
-            }
-        }
-    }
-
-    .headingText {
-        display: block;
-        font-size: 1.3rem;
-        font-weight: 400;
-        margin-bottom: 1.5em;
-    }
 }
