@@ -35,4 +35,12 @@
             @content;
         } //1800px +
     }
+
+    // ** MQ FOR USE WITH BULMA ** //
+
+    @if $breakpoint == mobile {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
 }
