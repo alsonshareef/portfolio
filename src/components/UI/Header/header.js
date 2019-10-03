@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import headerStyles from './header.module.scss';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    IoIosHome,
-    IoMdInformationCircle,
-    IoIosDocument,
-    IoIosListBox,
-    IoIosStats,
-    IoMdCall,
-} from 'react-icons/io';
+    faHome,
+    faInfo,
+    faFile,
+    faList,
+    faChartBar,
+    faPhone,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     // Tracks active state of navbar-burger button
@@ -18,11 +20,9 @@ const Header = () => {
     return (
         <header>
             <nav
-                className={[
-                    'navbar',
-                    'is-fixed-top',
-                    headerStyles.navbar__custom,
-                ].join(' ')}
+                className={['navbar', 'is-fixed-top', headerStyles.navbar].join(
+                    ' '
+                )}
             >
                 {/* 
                     Left Side of Navbar
@@ -39,9 +39,12 @@ const Header = () => {
 
                     <button
                         onClick={() => toggleActive(!active)}
-                        className={
-                            active ? 'navbar-burger is-active' : 'navbar-burger'
-                        }
+                        className={[
+                            active
+                                ? 'navbar-burger is-active'
+                                : 'navbar-burger',
+                            headerStyles.burger,
+                        ].join(' ')}
                         aria-label="menu"
                         aria-expanded="false"
                         data-target="navMenu"
@@ -67,8 +70,8 @@ const Header = () => {
                             offset={() => 900}
                             href="#top"
                         >
-                            <span className="icon">
-                                <IoIosHome />
+                            <span className={headerStyles.icon__home}>
+                                <FontAwesomeIcon icon={faHome} />
                             </span>
                             <span>Home</span>
                         </AnchorLink>
@@ -79,8 +82,8 @@ const Header = () => {
                             offset={() => 50}
                             href="#about"
                         >
-                            <span className="icon">
-                                <IoMdInformationCircle />
+                            <span className={headerStyles.icon__about}>
+                                <FontAwesomeIcon icon={faInfo} />
                             </span>
                             <span>About</span>
                         </AnchorLink>
@@ -91,8 +94,8 @@ const Header = () => {
                             offset={() => 50}
                             href="#projects"
                         >
-                            <span className="icon">
-                                <IoIosListBox />
+                            <span className={headerStyles.icon__projects}>
+                                <FontAwesomeIcon icon={faList} />
                             </span>
                             <span>Projects</span>
                         </AnchorLink>
@@ -103,8 +106,8 @@ const Header = () => {
                             offset={() => 50}
                             href="#skills"
                         >
-                            <span className="icon">
-                                <IoIosStats />
+                            <span className={headerStyles.icon__skills}>
+                                <FontAwesomeIcon icon={faChartBar} />
                             </span>
                             <span>Skills</span>
                         </AnchorLink>
@@ -115,8 +118,8 @@ const Header = () => {
                             offset={() => 50}
                             href="#contacts"
                         >
-                            <span className="icon">
-                                <IoMdCall />
+                            <span className={headerStyles.icon__contacts}>
+                                <FontAwesomeIcon icon={faPhone} />
                             </span>
                             <span>Contacts</span>
                         </AnchorLink>
@@ -127,8 +130,8 @@ const Header = () => {
                             offset={() => 50}
                             href="#"
                         >
-                            <span className="icon">
-                                <IoIosDocument />
+                            <span className={headerStyles.icon__resume}>
+                                <FontAwesomeIcon icon={faFile} />
                             </span>
                             <span>Resume</span>
                         </AnchorLink>
