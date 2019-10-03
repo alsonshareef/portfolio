@@ -1,34 +1,62 @@
-// @import '../../../styles/mixins';
+@import '../../../styles/mixins';
 
 // // NAVBAR
-.navbar__custom {
+.navbar {
     box-shadow: 0 2px 16px rgba(10, 10, 10, 0.1);
 
-    div {
-        button {
-            /* Removes default button styles on nav-burger */
-            background: none;
-            border: 0;
+    .burger {
+        /* Removes default button styles on nav-burger */
+        background: none;
+        border: 0;
+    }
+
+    .icon {
+        &__home {
+            margin-right: 0.2em;
+
+            @include respond(tablet) {
+                margin: 0 0.6em 0 0.2em;
+            }
+        }
+
+        &__about {
+            margin-right: 0.35em;
+
+            @include respond(tablet) {
+                margin: 0 1em 0 0.55em;
+            }
+        }
+
+        &__projects {
+            margin-right: 0.3em;
+
+            @include respond(tablet) {
+                margin: 0 0.6em 0 0.3em;
+            }
+        }
+
+        &__skills {
+            margin-right: 0.3em;
+
+            @include respond(tablet) {
+                margin: 0 0.65em 0 0.3em;
+            }
+        }
+
+        &__contacts {
+            margin-right: 0.2em;
+
+            @include respond(tablet) {
+                margin: 0 0.6em 0 0.3em;
+            }
+        }
+
+        &__resume {
+            margin-right: 0.3em;
+
+            @include respond(tablet) {
+                margin: 0 0.8em 0 0.4em;
+            }
         }
     }
 }
-
-// .navbarItems {
-//     display: flex;
-//     padding: 10px;
-
-//     li {
-//         padding: 0 0.3em;
-//     }
-
-//     @include respond(phone) {
-//         width: 100%;
-//         justify-content: space-around;
-//     }
-// }
-
-// .navbarItems a {
-//     &:hover {
-//         background: white;
-//     }
-// }
