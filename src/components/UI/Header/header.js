@@ -92,24 +92,24 @@ const Header = () => {
                             className="navbar-item "
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
-                            href="#projects"
-                        >
-                            <span className={headerStyles.icon__projects}>
-                                <FontAwesomeIcon icon={faList} />
-                            </span>
-                            <span>Projects</span>
-                        </AnchorLink>
-
-                        <AnchorLink
-                            className="navbar-item "
-                            onClick={() => toggleActive(false)}
-                            offset={() => 50}
                             href="#skills"
                         >
                             <span className={headerStyles.icon__skills}>
                                 <FontAwesomeIcon icon={faChartBar} />
                             </span>
                             <span>Skills</span>
+                        </AnchorLink>
+
+                        <AnchorLink
+                            className="navbar-item "
+                            onClick={() => toggleActive(false)}
+                            offset={() => 50}
+                            href="#projects"
+                        >
+                            <span className={headerStyles.icon__projects}>
+                                <FontAwesomeIcon icon={faList} />
+                            </span>
+                            <span>Projects</span>
                         </AnchorLink>
 
                         <AnchorLink
