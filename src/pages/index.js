@@ -24,8 +24,8 @@ class IndexPage extends Component {
                 <div id="top" />
                 <Banner srDefaultConfig={this.srDefaultConfig} />
                 <About srDefaultConfig={this.srDefaultConfig} />
-                <Projects srDefaultConfig={this.srDefaultConfig} />
                 <Skills srDefaultConfig={this.srDefaultConfig} />
+                <Projects srDefaultConfig={this.srDefaultConfig} />
                 <Contacts srDefaultConfig={this.srDefaultConfig} />
             </Layout>
         );
