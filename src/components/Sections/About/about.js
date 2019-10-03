@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import aboutStyles from './about.module.scss';
 
 import sr from '../../../scrollReveal';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 class About extends Component {
     componentDidMount() {
@@ -37,22 +40,41 @@ class About extends Component {
                                 alt="placeholder"
                             ></img>
                             <ul className={[aboutStyles.socials].join(' ')}>
-                                <li className="button">
+                                <li className="button is-large is-rounded">
+                                    <a
+                                        href="mailto:alson.shareef@gmail.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FontAwesomeIcon
+                                            className={aboutStyles.icon}
+                                            icon={faEnvelope}
+                                        />
+                                    </a>
+                                </li>
+                                <li className="button is-large is-rounded">
                                     <a
                                         href="https://github.com/alsonshareef"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <FaGithub />
+                                        <FontAwesomeIcon
+                                            className={aboutStyles.icon}
+                                            icon={faGithub}
+                                        />
                                     </a>
                                 </li>
-                                <li className="button">
+                                <li className="button is-large is-rounded">
                                     <a
                                         href="https://www.linkedin.com/in/alsonshareef/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <FaLinkedin />
+                                        <span>
+                                            <FontAwesomeIcon
+                                                icon={faLinkedin}
+                                            />
+                                        </span>
                                     </a>
                                 </li>
                             </ul>
@@ -61,6 +83,7 @@ class About extends Component {
                         <div
                             className={[
                                 'column',
+                                'content',
                                 'has-text-centered-mobile',
                                 aboutStyles.textColumn,
                             ].join(' ')}
