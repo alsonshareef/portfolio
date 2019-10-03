@@ -43,4 +43,10 @@
             @content;
         }
     }
+
+    @if $breakpoint == tablet {
+        @media (max-width: 1023px) {
+            @content;
+        }
+    }
 }
