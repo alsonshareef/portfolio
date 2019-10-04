@@ -21,7 +21,7 @@ class IndexPage extends Component {
     render() {
         return (
             <Layout>
-                <div id="top" />
+                <div id="top" style={{ minHeight: '100vh' }} />
                 <Banner srDefaultConfig={this.srDefaultConfig} />
                 <About srDefaultConfig={this.srDefaultConfig} />
                 <Skills srDefaultConfig={this.srDefaultConfig} />
