@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import headerStyles from './header.module.scss';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Scrollspy from 'react-scrollspy';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faHome,
     faInfo,
     faFile,
     faList,
@@ -63,21 +63,22 @@ const Header = () => {
                     id="navMenu"
                     className={active ? 'navbar-menu is-active' : 'navbar-menu'}
                 >
-                    <div className="navbar-end is-size-6-touch is-size-5-desktop">
+                    <Scrollspy
+                        className="navbar-end is-size-6-touch is-size-5-desktop"
+                        items={[
+                            'top',
+                            'about',
+                            'skills',
+                            'projects',
+                            'contacts',
+                        ]}
+                        currentClassName="is-active"
+                        offset={-300}
+                    >
+                        {/* Fake link thats invisible, but count as an item in Scrollspy to delay highlighting of navbar*/}
+                        <a href="#top"> </a>
                         <AnchorLink
-                            className="navbar-item "
-                            onClick={() => toggleActive(false)}
-                            offset={() => 900}
-                            href="#top"
-                        >
-                            <span className={headerStyles.icon__home}>
-                                <FontAwesomeIcon icon={faHome} />
-                            </span>
-                            <span>Home</span>
-                        </AnchorLink>
-
-                        <AnchorLink
-                            className="navbar-item "
+                            className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#about"
@@ -87,9 +88,8 @@ const Header = () => {
                             </span>
                             <span>About</span>
                         </AnchorLink>
-
                         <AnchorLink
-                            className="navbar-item "
+                            className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#skills"
@@ -99,9 +99,8 @@ const Header = () => {
                             </span>
                             <span>Skills</span>
                         </AnchorLink>
-
                         <AnchorLink
-                            className="navbar-item "
+                            className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#projects"
@@ -111,9 +110,8 @@ const Header = () => {
                             </span>
                             <span>Projects</span>
                         </AnchorLink>
-
                         <AnchorLink
-                            className="navbar-item "
+                            className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#contacts"
@@ -123,9 +121,8 @@ const Header = () => {
                             </span>
                             <span>Contacts</span>
                         </AnchorLink>
-
                         <AnchorLink
-                            className="navbar-item "
+                            className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
                             offset={() => 50}
                             href="#"
@@ -135,7 +132,7 @@ const Header = () => {
                             </span>
                             <span>Resume</span>
                         </AnchorLink>
-                    </div>
+                    </Scrollspy>
                 </div>
             </nav>
         </header>
