@@ -3,14 +3,22 @@
 
 // CUSTOMIZED BULMA VARIABLES //
 
+// FONT
+// $text: blue;
+// $text-invert: blue;
+// $text-light	: blue;
+// $text-strong: blue;
+
 // NAVBAR
+$navbar-item-color: rgb(95, 95, 95);
+
 // :active
 $navbar-tab-active-color: hsl(0, 0%, 4%);
 $navbar-tab-active-border-bottom-color: hsl(0, 0%, 4%);
 
 // :hover
-$navbar-item-hover-color: hsl(0, 0%, 4%);
-$navbar-tab-hover-border-bottom-color: hsl(0, 0%, 4%);
+$navbar-item-hover-color: hsl(0, 0%, 19%);
+$navbar-tab-hover-border-bottom-color: white;
 
 @import '~bulma/bulma.sass';
 
@@ -18,4 +26,8 @@ $navbar-tab-hover-border-bottom-color: hsl(0, 0%, 4%);
 
 h3 {
     text-align: center;
+}
+
+a:focus {
+    outline: none;
 }
