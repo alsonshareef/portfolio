@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import headerStyles from './header.module.scss';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -14,6 +15,16 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    author
+                }
+            }
+        }
+    `);
+
     // Tracks active state of navbar-burger button
     const [active, toggleActive] = useState(false);
 
@@ -35,7 +46,7 @@ const Header = () => {
                         offset={() => 900}
                         href="#top"
                     >
-                        Alson Shareef
+                        {data.site.siteMetadata.author}
                     </AnchorLink>
 
                     <button
