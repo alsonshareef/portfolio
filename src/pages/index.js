@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/index.scss';
 
 import Layout from '../components/UI/Layout/layout';
+import Head from '../components/Head/head';
 import Banner from '../components/Sections/Banner/banner';
 import About from '../components/Sections/About/about';
 import Projects from '../components/Sections/Projects/projects';
@@ -22,6 +23,7 @@ class IndexPage extends Component {
         return (
             <Layout>
                 <div id="top" style={{ minHeight: '100vh' }} />
+                <Head title="Home" />
                 <Banner srDefaultConfig={this.srDefaultConfig} />
                 <About srDefaultConfig={this.srDefaultConfig} />
                 <Skills srDefaultConfig={this.srDefaultConfig} />
