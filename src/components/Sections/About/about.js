@@ -26,10 +26,7 @@ class About extends Component {
                 className={['section', aboutStyles.about__page].join(' ')}
             >
                 <div className="container">
-                    <h3
-                        className={['title', aboutStyles.title].join(' ')}
-                        ref="abouth3"
-                    >
+                    <h3 className="title" ref="abouth3">
                         About Me
                     </h3>
                     <div className="columns">
