@@ -1,4 +1,19 @@
+@import '../../../styles/mixins';
+
 .skills__page {
-    // background: palevioletred;
+    background: palevioletred;
     min-height: 100vh;
+
+    .title {
+        margin-bottom: 2.5rem;
+    }
+
+    .subtitle {
+        padding-bottom: 20px;
+        border-bottom: solid hsl(0, 0%, 85%) 1px;
+
+        @include respond(mobile) {
+            text-align: center;
+        }
+    }
 }
