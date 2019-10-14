@@ -25,10 +25,13 @@ class About extends Component {
                 id="about"
                 className={['section', aboutStyles.about__page].join(' ')}
             >
+                <h3
+                    className={['title', aboutStyles.title].join(' ')}
+                    ref="abouth3"
+                >
+                    About Me
+                </h3>
                 <div className="container">
-                    <h3 className="title" ref="abouth3">
-                        About Me
-                    </h3>
                     <div className="columns">
                         <div className="column has-text-centered">
                             {/* Replace img element with gatsby-image. */}
