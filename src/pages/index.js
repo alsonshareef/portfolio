@@ -10,25 +10,16 @@ import Skills from '../components/Sections/Skills/skills';
 import Contacts from '../components/Sections/Contacts/contacts';
 
 class IndexPage extends Component {
-    // Default scrollReveal config properties.
-    srDefaultConfig = {
-        easing: 'cubic-bezier(0.5, 0, 0, 1)',
-        distance: '30px',
-        duration: 1000,
-        desktop: true,
-        mobile: true,
-    };
-
     render() {
         return (
             <Layout>
                 <div id="top" style={{ minHeight: '100vh' }} />
                 <Head title="Home" />
-                <Banner srDefaultConfig={this.srDefaultConfig} />
-                <About srDefaultConfig={this.srDefaultConfig} />
-                <Skills srDefaultConfig={this.srDefaultConfig} />
-                <Projects srDefaultConfig={this.srDefaultConfig} />
-                <Contacts srDefaultConfig={this.srDefaultConfig} />
+                <Banner />
+                <About />
+                <Skills />
+                <Projects />
+                <Contacts />
             </Layout>
         );
     }
