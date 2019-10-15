@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import skillsStyles from './skills.module.scss';
 
+import reactLogo from '../../../images/react.svg';
+import nodeLogo from '../../../images/nodejs.png';
+import babelLogo from '../../../images/babel.svg';
+import npmLogo from '../../../images/npm.svg';
+import htmlLogo from '../../../images/html5.svg';
+import webpackLogo from '../../../images/webpack.png';
+import gatsbyLogo from '../../../images/gatsby.svg';
+import cssLogo from '../../../images/css.svg';
+
 class Skills extends Component {
     render() {
         return (
@@ -23,16 +32,23 @@ class Skills extends Component {
                         </h4>
                         <div className="level">
                             <div className="level-item">
+                                <img src={htmlLogo} alt="html logo" />
                                 <p>HTML5</p>
                             </div>
                             <div className="level-item">
+                                <img src={cssLogo} alt="html logo" />
                                 <p>CSS3</p>
                             </div>
                             <div className="level-item">
                                 <p>JavaScript</p>
                             </div>
                             <div className="level-item">
+                                <img src={reactLogo} alt="react logo" />
                                 <p>React</p>
+                            </div>
+                            <div className="level-item">
+                                <img src={gatsbyLogo} alt="gatsby logo" />
+                                <p>Gatsby</p>
                             </div>
                         </div>
                     </div>
@@ -47,6 +63,7 @@ class Skills extends Component {
                         </h4>
                         <div className="level">
                             <div className="level-item">
+                                <img src={nodeLogo} alt="node logo" />
                                 <p>Node.js</p>
                             </div>
                             <div className="level-item">
@@ -75,7 +92,6 @@ class Skills extends Component {
                             </div>
                         </div>
                     </div>
-
                     <div className="box">
                         <h4
                             className={[
@@ -87,12 +103,15 @@ class Skills extends Component {
                         </h4>
                         <div className="level">
                             <div className="level-item">
+                                <img src={webpackLogo} alt="webpack logo" />
                                 <p>Webpack</p>
                             </div>
                             <div className="level-item">
+                                <img src={babelLogo} alt="babel logo" />
                                 <p>Babel</p>
                             </div>
                             <div className="level-item">
+                                <img src={npmLogo} alt="npm logo" />
                                 <p>npm</p>
                             </div>
                             <div className="level-item">
