@@ -1,24 +1,11 @@
 import React, { Component } from 'react';
 import aboutStyles from './about.module.scss';
 
-import sr from '../../../scrollReveal';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 class About extends Component {
-    componentDidMount() {
-        const h3Config = {
-            ...this.props.srDefaultConfig,
-            delay: 500,
-            distance: '0px',
-            origin: 'bottom',
-        };
-
-        sr.reveal(this.refs.abouth3, h3Config);
-    }
-
     render() {
         return (
             <section
@@ -27,13 +14,21 @@ class About extends Component {
             >
                 <h3
                     className={['title', aboutStyles.title].join(' ')}
-                    ref="abouth3"
+                    data-sal="slide-up"
+                    data-sal-duration="1200"
+                    data-sal-delay="300"
+                    data-sal-easing="ease-in"
                 >
                     About Me
                 </h3>
                 <div className="container">
                     <div className="columns">
-                        <div className="column has-text-centered">
+                        <div
+                            className="column has-text-centered"
+                            data-sal="slide-right"
+                            data-sal-duration="1200"
+                            data-sal-delay="300"
+                        >
                             {/* Replace img element with gatsby-image. */}
                             <img
                                 src="https://i.pravatar.cc/300"
@@ -87,6 +82,9 @@ class About extends Component {
                                 'has-text-centered-mobile',
                                 aboutStyles.textColumn,
                             ].join(' ')}
+                            data-sal="slide-left"
+                            data-sal-duration="1200"
+                            data-sal-delay="600"
                         >
                             <p>
                                 I'm a passionate Full-Stack Web Developer

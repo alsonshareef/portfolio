@@ -1,32 +1,7 @@
 import React, { Component } from 'react';
 import bannerStyles from './banner.module.scss';
 
-import sr from '../../../scrollReveal';
-
 class Banner extends Component {
-    // Applies scroll reveal functionality to heading after mounting.
-    componentDidMount() {
-        // Scroll reveal config for h1
-        const h1Config = {
-            ...this.props.srDefaultConfig,
-            reset: true,
-            delay: 500,
-            origin: window.innerWidth > 768 ? 'left' : 'bottom',
-        };
-
-        sr.reveal(this.refs.bannerh1, h1Config);
-
-        // Scroll reveal config for h2
-        const h2config = {
-            ...this.props.srDefaultConfig,
-            reset: true,
-            delay: 1400,
-            origin: window.innerWidth > 768 ? 'left' : 'bottom',
-        };
-
-        sr.reveal(this.refs.bannerh2, h2config);
-    }
-
     render() {
         return (
             <section
@@ -39,17 +14,21 @@ class Banner extends Component {
                     <div className="container has-text-centered-mobile">
                         <h1
                             className="title is-size-3-mobile is-size-2-tablet is-size-1-desktop"
-                            ref="bannerh1"
+                            data-sal="slide-up"
+                            data-sal-duration="1200"
+                            data-sal-easing="ease-out"
                         >
                             Hi, my name is{' '}
                             <span className={bannerStyles.headingMain__name}>
                                 Alson Shareef
                             </span>
                         </h1>
-
                         <h2
                             className="subtitle is-size-5-mobile is-size-4-tablet is-size-3-desktop"
-                            ref="bannerh2"
+                            data-sal="slide-up"
+                            data-sal-duration="1200"
+                            data-sal-delay="1000"
+                            data-sal-easing="ease-out"
                         >
                             I enjoy problem-solving and building meaningful
                             solutions for the web.
