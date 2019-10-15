@@ -13,13 +13,14 @@
     "gatsby": "^2.13.51",
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-sass": "^2.1.12",
+    "gatsby-plugin-scroll-reveal": "0.0.3",
+    "intersection-observer": "^0.7.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-scrollspy": "^3.4.0",
-    "scrollreveal": "^4.0.5"
+    "react-scrollspy": "^3.4.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
