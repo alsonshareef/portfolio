@@ -10,16 +10,24 @@ import Skills from '../components/Sections/Skills/skills';
 import Contacts from '../components/Sections/Contacts/contacts';
 
 class IndexPage extends Component {
+    defaultSR = {
+        easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        distance: '30px',
+        duration: 1000,
+        desktop: true,
+        mobile: true,
+    };
+
     render() {
         return (
             <Layout>
                 <div id="top" style={{ minHeight: '100vh' }} />
                 <Head title="Home" />
-                <Banner />
-                <About />
-                <Skills />
-                <Projects />
-                <Contacts />
+                <Banner defaultSR={this.defaultSR} />
+                <About defaultSR={this.defaultSR} />
+                <Skills defaultSR={this.defaultSR} />
+                <Projects defaultSR={this.defaultSR} />
+                <Contacts defaultSR={this.defaultSR} />
             </Layout>
         );
     }
