@@ -12,23 +12,12 @@ class About extends Component {
                 id="about"
                 className={['section', aboutStyles.about__page].join(' ')}
             >
-                <h3
-                    className={['title', aboutStyles.title].join(' ')}
-                    data-sal="slide-up"
-                    data-sal-duration="1200"
-                    data-sal-delay="300"
-                    data-sal-easing="ease-in"
-                >
+                <h3 className={['title', aboutStyles.title].join(' ')}>
                     About Me
                 </h3>
                 <div className="container">
                     <div className="columns">
-                        <div
-                            className="column has-text-centered"
-                            data-sal="slide-right"
-                            data-sal-duration="1200"
-                            data-sal-delay="300"
-                        >
+                        <div className="column has-text-centered">
                             {/* Replace img element with gatsby-image. */}
                             <img
                                 src="https://i.pravatar.cc/300"
@@ -82,9 +71,6 @@ class About extends Component {
                                 'has-text-centered-mobile',
                                 aboutStyles.textColumn,
                             ].join(' ')}
-                            data-sal="slide-left"
-                            data-sal-duration="1200"
-                            data-sal-delay="600"
                         >
                             <p>
                                 I'm a passionate Full-Stack Web Developer
