@@ -2,6 +2,27 @@ import React, { Component } from 'react';
 import bannerStyles from './banner.module.scss';
 
 class Banner extends Component {
+    componentDidMount = () => {
+        const titleConfig = {
+            ...this.props.defaultSR,
+            reset: true,
+            delay: 500,
+            origin: window.innerWidth > 768 ? 'left' : 'bottom',
+        };
+
+        const subtitleConfig = {
+            ...this.props.defaultSR,
+            reset: true,
+            delay: 1200,
+            origin: window.innerWidth > 768 ? 'left' : 'bottom',
+        };
+
+        import('../../../scrollReveal').then(module => {
+            module.default.reveal(this.refs.title, titleConfig);
+            module.default.reveal(this.refs.subtitle, subtitleConfig);
+        });
+    };
+
     render() {
         return (
             <section
@@ -14,9 +35,7 @@ class Banner extends Component {
                     <div className="container has-text-centered-mobile">
                         <h1
                             className="title is-size-3-mobile is-size-2-tablet is-size-1-desktop"
-                            data-sal="slide-up"
-                            data-sal-duration="1200"
-                            data-sal-easing="ease-out"
+                            ref="title"
                         >
                             Hi, my name is{' '}
                             <span className={bannerStyles.headingMain__name}>
@@ -25,10 +44,7 @@ class Banner extends Component {
                         </h1>
                         <h2
                             className="subtitle is-size-5-mobile is-size-4-tablet is-size-3-desktop"
-                            data-sal="slide-up"
-                            data-sal-duration="1200"
-                            data-sal-delay="1000"
-                            data-sal-easing="ease-out"
+                            ref="subtitle"
                         >
                             I enjoy problem-solving and building meaningful
                             solutions for the web.
