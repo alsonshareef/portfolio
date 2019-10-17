@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { graphql } from 'gatsby';
 import '../styles/index.scss';
 
 import Layout from '../components/UI/Layout/layout';
@@ -9,8 +10,8 @@ import Projects from '../components/Sections/Projects/projects';
 import Skills from '../components/Sections/Skills/skills';
 import Contacts from '../components/Sections/Contacts/contacts';
 
-class IndexPage extends Component {
-    defaultSR = {
+const IndexPage = () => {
+    const defaultSR = {
         easing: 'cubic-bezier(0.5, 0, 0, 1)',
         distance: '30px',
         duration: 1000,
@@ -18,19 +19,17 @@ class IndexPage extends Component {
         mobile: true,
     };
 
-    render() {
-        return (
-            <Layout>
-                <div id="top" style={{ minHeight: '100vh' }} />
-                <Head title="Home" />
-                <Banner defaultSR={this.defaultSR} />
-                <About defaultSR={this.defaultSR} />
-                <Skills defaultSR={this.defaultSR} />
-                <Projects defaultSR={this.defaultSR} />
-                <Contacts defaultSR={this.defaultSR} />
-            </Layout>
-        );
-    }
-}
+    return (
+        <Layout>
+            <div id="top" style={{ minHeight: '100vh' }} />
+            <Head title="Home" />
+            <Banner defaultSR={defaultSR} />
+            <About defaultSR={defaultSR} />
+            <Skills defaultSR={defaultSR} />
+            <Projects defaultSR={defaultSR} />
+            <Contacts defaultSR={defaultSR} />
+        </Layout>
+    );
+};
 
 export default IndexPage;
