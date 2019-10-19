@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import '../styles/index.scss';
 
 import Layout from '../components/UI/Layout/layout';
@@ -11,6 +11,21 @@ import Skills from '../components/Sections/Skills/skills';
 import Contacts from '../components/Sections/Contacts/contacts';
 
 const IndexPage = () => {
+    const data = useStaticQuery(graphql`
+        query MyQuery {
+            allFile {
+                nodes {
+                    name
+                    childImageSharp {
+                        fluid {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        }
+    `);
+
     const defaultSR = {
         easing: 'cubic-bezier(0.5, 0, 0, 1)',
         distance: '30px',
@@ -25,7 +40,7 @@ const IndexPage = () => {
             <Head title="Home" />
             <Banner defaultSR={defaultSR} />
             <About defaultSR={defaultSR} />
-            <Skills defaultSR={defaultSR} />
+            <Skills defaultSR={defaultSR} data={data.allFile.nodes} />
             <Projects defaultSR={defaultSR} />
             <Contacts defaultSR={defaultSR} />
         </Layout>
