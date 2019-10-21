@@ -17,11 +17,17 @@
         }
     }
 
+    .level_item {
+        @include respond(mobile) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
     .img_container {
-        width: 60%;
+        width: 70%;
 
         p {
-            margin-top: 0.8em;
+            margin-top: 0.3em;
             text-align: center;
         }
     }
