@@ -4,12 +4,11 @@ import skillsStyles from './skills.module.scss';
 import Img from 'gatsby-image';
 
 class Skills extends Component {
-    skillImageNodes = this.props.data;
-    skillItems = this.skillImageNodes.map(node => (
+    skillItems = this.props.data.map(node => (
         <div className="level-item">
             <div className={[skillsStyles.img_container].join(' ')}>
                 <Img fluid={node.childImageSharp.fluid} />
-                <p>{node.name}</p>
+                <p>{node.name === 'Node' ? `${node.name}.js` : node.name}</p>
             </div>
         </div>
     ));
