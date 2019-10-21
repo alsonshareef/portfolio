@@ -5,10 +5,12 @@ import Img from 'gatsby-image';
 
 class Skills extends Component {
     skillItems = this.props.data.map(node => (
-        <div className="level-item">
+        <div className={['level-item', skillsStyles.level_item].join(' ')}>
             <div className={[skillsStyles.img_container].join(' ')}>
                 <Img fluid={node.childImageSharp.fluid} />
-                <p>{node.name === 'Node' ? `${node.name}.js` : node.name}</p>
+                <p className="has-text-weight-semibold">
+                    {node.name === 'Node' ? `${node.name}.js` : node.name}
+                </p>
             </div>
         </div>
     ));
