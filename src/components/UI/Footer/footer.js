@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-// import footerStyles from './footer.module.scss';
+import footerStyles from './footer.module.scss';
 
 const footer = () => {
     const data = useStaticQuery(graphql`
@@ -14,7 +14,7 @@ const footer = () => {
     `);
 
     return (
-        <footer className="footer">
+        <footer className={['footer', footerStyles.footer].join(' ')}>
             <div className="content has-text-centered">
                 <p>{`Created by ${data.site.siteMetadata.author}, ©️ 2019`}</p>
             </div>
