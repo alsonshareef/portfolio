@@ -4,6 +4,7 @@ import skillsStyles from './skills.module.scss';
 import Img from 'gatsby-image';
 
 class Skills extends Component {
+    // Array of components holding html for each skill item using data from graphql query.
     skillItems = this.props.data.map(node => (
         <div className={['level-item', skillsStyles.level_item].join(' ')}>
             <div className={[skillsStyles.img_container].join(' ')}>
