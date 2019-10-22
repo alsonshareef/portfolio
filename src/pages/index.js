@@ -12,7 +12,7 @@ import Contacts from '../components/Sections/Contacts/contacts';
 
 const IndexPage = () => {
     const data = useStaticQuery(graphql`
-        query MyQuery {
+        query {
             allFile {
                 nodes {
                     name
