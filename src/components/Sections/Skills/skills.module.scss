@@ -24,7 +24,11 @@
     }
 
     .img_container {
-        width: 70%;
+        width: 120px;
+
+        @include respond(mobile) {
+            width: 40%;
+        }
 
         p {
             margin-top: 0.3em;
