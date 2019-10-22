@@ -24,7 +24,12 @@ class About extends Component {
                                 alt="placeholder"
                             ></img>
                             <ul className={[aboutStyles.socials].join(' ')}>
-                                <li className="button is-large is-rounded">
+                                <li
+                                    className={[
+                                        'button is-large',
+                                        aboutStyles.link,
+                                    ].join(' ')}
+                                >
                                     <a
                                         href="mailto:alson.shareef@gmail.com"
                                         target="_blank"
@@ -36,7 +41,12 @@ class About extends Component {
                                         />
                                     </a>
                                 </li>
-                                <li className="button is-large is-rounded">
+                                <li
+                                    className={[
+                                        'button is-large',
+                                        aboutStyles.link,
+                                    ].join(' ')}
+                                >
                                     <a
                                         href="https://github.com/alsonshareef"
                                         target="_blank"
@@ -48,7 +58,12 @@ class About extends Component {
                                         />
                                     </a>
                                 </li>
-                                <li className="button is-large is-rounded">
+                                <li
+                                    className={[
+                                        'button is-large',
+                                        aboutStyles.link,
+                                    ].join(' ')}
+                                >
                                     <a
                                         href="https://www.linkedin.com/in/alsonshareef/"
                                         target="_blank"
