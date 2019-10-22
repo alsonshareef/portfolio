@@ -1,4 +1,12 @@
 .projects__page {
     min-height: 100vh;
-    background: steelblue;
+    background: springgreen;
+
+    .title {
+        margin-bottom: 2.5rem;
+    }
+
+    .card {
+        margin-bottom: 1.5em;
+    }
 }
