@@ -1,7 +1,7 @@
 @import '../../../styles/mixins';
 
 .about__page {
-    background: white;
+    // background: palevioletred;
     min-height: 100vh;
 
     .title {
@@ -9,7 +9,9 @@
     }
 
     .socials {
-        margin-top: 1em;
+        .link {
+            margin: 1em;
+        }
     }
 
     .textColumn {
