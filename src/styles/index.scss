@@ -1,27 +1,35 @@
 @import './_typography.scss';
 @import './mixins';
 
+// CUSTOM COLORS //
+// light-mode
+$primary: #87a0a8;
+$secondary: #7ca2a9;
+$tertiary: #5d525b;
+$highlight-primary: #e4bc94;
+
+// dark-mode
+
 // CUSTOMIZED BULMA VARIABLES //
 
-// FONT
-// $text: blue;
-// $text-invert: blue;
-// $text-light	: blue;
-// $text-strong: blue;
-
-// NAVBAR
-$navbar-item-color: rgb(95, 95, 95);
+// ----- NAVBAR ----- //
+$navbar-background-color: $primary;
+$navbar-item-color: white;
 
 // :active
-$navbar-tab-active-color: hsl(0, 0%, 4%);
-$navbar-tab-active-border-bottom-color: hsl(0, 0%, 4%);
+$navbar-tab-active-color: $tertiary;
+$navbar-tab-active-border-bottom-color: $tertiary;
 
 // :hover
-$navbar-item-hover-color: hsl(0, 0%, 19%);
-$navbar-tab-hover-background-color: rgb(206, 206, 206);
+$navbar-item-hover-color: $tertiary;
+$navbar-tab-hover-background-color: white;
 $navbar-tab-hover-border-bottom-color: white;
 
-// FOOTER
+// ----- TITLE ----- //
+$title-color: $tertiary;
+$subtitle-color: $tertiary;
+
+// ----- FOOTER ----- //
 $footer-padding: 1rem 1.5rem 1rem;
 
 @import '~bulma/bulma.sass';
