@@ -1,7 +1,7 @@
 @import '../../../styles/mixins';
 
 .skills__page {
-    background: lightskyblue;
+    // background: lightskyblue;
     min-height: 100vh;
 
     .title {
@@ -9,7 +9,7 @@
     }
 
     .subtitle {
-        padding-bottom: 20px;
+        padding-bottom: 0.5em;
         border-bottom: solid hsl(0, 0%, 85%) 1px;
 
         @include respond(mobile) {
@@ -17,22 +17,17 @@
         }
     }
 
-    .level_item {
-        @include respond(mobile) {
-            margin-bottom: 1.5rem;
-        }
+    .skill_item {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .img_container {
-        width: 120px;
+        width: 40%;
 
         @include respond(mobile) {
-            width: 40%;
-        }
-
-        p {
-            margin-top: 0.3em;
-            text-align: center;
+            width: 20%;
         }
     }
 }
