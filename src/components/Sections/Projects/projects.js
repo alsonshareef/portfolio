@@ -1,7 +1,13 @@
 import React from 'react';
 import projectStyles from './projects.module.scss';
+import Img from 'gatsby-image';
 
-const Projects = () => {
+const Projects = ({ data }) => {
+    // Array of gatsby image versions of project images queried from graphql
+    const projectImgs = data.map(node => (
+        <Img fluid={node.childImageSharp.fluid} />
+    ));
+
     return (
         <section
             className={['section', projectStyles.projects__page].join(' ')}
@@ -18,6 +24,7 @@ const Projects = () => {
                                 <p className="card-header-title">Project 1</p>
                             </header>
                             <div className="card-content">
+                                {projectImgs[0]}
                                 <div className="content">
                                     This is the description for Project 1.
                                 </div>
@@ -40,6 +47,7 @@ const Projects = () => {
                             </header>
                             <div className="card-content">
                                 <div className="content">
+                                    {projectImgs[0]}
                                     This is the description for Project 3.
                                 </div>
                                 <span className="tag">Node.js</span>
@@ -63,6 +71,7 @@ const Projects = () => {
                             </header>
                             <div className="card-content">
                                 <div className="content">
+                                    {projectImgs[0]}
                                     This is the description for Project 2.
                                 </div>
                                 <span className="tag">React</span>
