@@ -24,13 +24,9 @@ class About extends Component {
                                 alt="placeholder"
                             ></img>
                             <ul className={[aboutStyles.socials].join(' ')}>
-                                <li
-                                    className={[
-                                        'button is-large',
-                                        aboutStyles.link,
-                                    ].join(' ')}
-                                >
+                                <li className={aboutStyles.link}>
                                     <a
+                                        className="button is-large"
                                         href="mailto:alson.shareef@gmail.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -41,13 +37,9 @@ class About extends Component {
                                         />
                                     </a>
                                 </li>
-                                <li
-                                    className={[
-                                        'button is-large',
-                                        aboutStyles.link,
-                                    ].join(' ')}
-                                >
+                                <li className={aboutStyles.link}>
                                     <a
+                                        className="button is-large"
                                         href="https://github.com/alsonshareef"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -58,13 +50,9 @@ class About extends Component {
                                         />
                                     </a>
                                 </li>
-                                <li
-                                    className={[
-                                        'button is-large',
-                                        aboutStyles.link,
-                                    ].join(' ')}
-                                >
+                                <li className={aboutStyles.link}>
                                     <a
+                                        className="button is-large"
                                         href="https://www.linkedin.com/in/alsonshareef/"
                                         target="_blank"
                                         rel="noopener noreferrer"
