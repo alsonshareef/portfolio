@@ -42,7 +42,7 @@ const Header = () => {
                 <div className="navbar-brand">
                     <AnchorLink
                         onClick={() => toggleActive(false)}
-                        className="navbar-item is-size-4-touch is-size-3-desktop"
+                        className="navbar-item is-size-3-touch is-size-2-desktop"
                         offset={() => 900}
                         href="#top"
                     >
@@ -92,7 +92,7 @@ const Header = () => {
                         <AnchorLink
                             className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
-                            offset={() => 50}
+                            offset={() => 70}
                             href="#about"
                         >
                             <span className={headerStyles.icon__about}>
@@ -103,7 +103,7 @@ const Header = () => {
                         <AnchorLink
                             className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
-                            offset={() => 50}
+                            offset={() => 70}
                             href="#skills"
                         >
                             <span className={headerStyles.icon__skills}>
@@ -114,7 +114,7 @@ const Header = () => {
                         <AnchorLink
                             className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
-                            offset={() => 50}
+                            offset={() => 70}
                             href="#projects"
                         >
                             <span className={headerStyles.icon__projects}>
@@ -125,7 +125,7 @@ const Header = () => {
                         <AnchorLink
                             className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
-                            offset={() => 50}
+                            offset={() => 70}
                             href="#contacts"
                         >
                             <span className={headerStyles.icon__contacts}>
@@ -136,7 +136,7 @@ const Header = () => {
                         <AnchorLink
                             className="navbar-item is-tab"
                             onClick={() => toggleActive(false)}
-                            offset={() => 50}
+                            offset={() => 70}
                             href="#"
                         >
                             <span className={headerStyles.icon__resume}>
