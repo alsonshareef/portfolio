@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
             <div id="top" style={{ minHeight: '100vh' }} />
             <Head title="Home" />
             <Banner defaultSR={defaultSR} />
-            <About defaultSR={defaultSR} />
+            <About defaultSR={defaultSR} data={data.profileImg.nodes} />
             <Skills defaultSR={defaultSR} data={data.skillsImgs.nodes} />
             <Projects defaultSR={defaultSR} data={data.projectImgs.nodes} />
             <Contacts defaultSR={defaultSR} />
@@ -36,6 +36,16 @@ export default IndexPage;
 
 export const query = graphql`
     {
+        profileImg: allFile(filter: { relativeDirectory: { eq: "profile" } }) {
+            nodes {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+
         skillsImgs: allFile(filter: { relativeDirectory: { eq: "skills" } }) {
             nodes {
                 name
