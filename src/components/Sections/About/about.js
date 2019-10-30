@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import aboutStyles from './about.module.scss';
 
+import Img from 'gatsby-image';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -17,12 +19,19 @@ class About extends Component {
                 </h3>
                 <div className="container">
                     <div className="columns">
-                        <div className="column has-text-centered">
-                            {/* Replace img element with gatsby-image. */}
-                            <img
-                                src="https://i.pravatar.cc/300"
-                                alt="placeholder"
-                            ></img>
+                        <div
+                            className={[
+                                'column has-text-centered',
+                                aboutStyles.profileColumn,
+                            ].join(' ')}
+                        >
+                            <div className={aboutStyles.img_container}>
+                                <Img
+                                    fluid={
+                                        this.props.data[0].childImageSharp.fluid
+                                    }
+                                />
+                            </div>
                             <ul className={[aboutStyles.socials].join(' ')}>
                                 <li className={aboutStyles.link}>
                                     <a
