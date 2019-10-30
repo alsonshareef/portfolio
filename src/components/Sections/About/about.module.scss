@@ -8,12 +8,33 @@
         margin-bottom: 2.5rem;
     }
 
+    .img_container {
+        margin: 0.3em auto 0;
+        width: 300px;
+
+        @include respond(mobile) {
+            margin-top: 0;
+        }
+
+        @include respond(sm-mobile) {
+            width: 85%;
+        }
+    }
+
     .socials {
         display: flex;
         justify-content: center;
 
         .link {
             margin: 1.3em 1em 1em;
+        }
+    }
+
+    // --- COLUMNS
+
+    .profileColumn {
+        @include respond(mobile) {
+            padding-bottom: 0;
         }
     }
 
