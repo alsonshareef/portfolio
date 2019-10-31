@@ -1,12 +1,18 @@
 @import '../../../styles/mixins';
 
 .banner {
-    // background: blue;
-    color: #5d525b;
+    background: white;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: -1;
+
+    .headingMain_name {
+        @include respond(sm-mobile) {
+            display: block;
+            margin-bottom: 0.9em;
+        }
+    }
 }
