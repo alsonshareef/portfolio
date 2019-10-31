@@ -4,44 +4,44 @@ import skillsStyles from './skills.module.scss';
 import Img from 'gatsby-image';
 
 class Skills extends Component {
-    componentDidMount() {
-        const titleConfig = {
-            ...this.props.defaultSR,
-            delay: 600,
-            origin: 'bottom',
-        };
+    // componentDidMount() {
+    //     const titleConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 600,
+    //         origin: 'bottom',
+    //     };
 
-        const subtitleConfig = {
-            ...this.props.defaultSR,
-            delay: 1000,
-            origin: 'left',
-        };
+    //     const subtitleConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 1000,
+    //         origin: 'left',
+    //     };
 
-        const skillItemConfig = {
-            ...this.props.defaultSR,
-            delay: 1200,
-            origin: 'bottom',
-        };
+    //     const skillItemConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 1200,
+    //         origin: 'bottom',
+    //     };
 
-        import('../../../scrollReveal').then(module => {
-            // Title SR
-            module.default.reveal(this.refs.title, titleConfig);
+    //     import('../../../scrollReveal').then(module => {
+    //         // Title SR
+    //         module.default.reveal(this.refs.title, titleConfig);
 
-            // Subtitle SR
-            for (const refProp of Object.keys(this.refs)) {
-                if (refProp.includes('subtitle')) {
-                    module.default.reveal(this.refs[refProp], subtitleConfig);
-                }
-            }
+    //         // Subtitle SR
+    //         for (const refProp of Object.keys(this.refs)) {
+    //             if (refProp.includes('subtitle')) {
+    //                 module.default.reveal(this.refs[refProp], subtitleConfig);
+    //             }
+    //         }
 
-            // Skill item SR
-            for (const refProp of Object.keys(this.refs)) {
-                if (refProp.includes('skillItem')) {
-                    module.default.reveal(this.refs[refProp], skillItemConfig);
-                }
-            }
-        });
-    }
+    //         // Skill item SR
+    //         for (const refProp of Object.keys(this.refs)) {
+    //             if (refProp.includes('skillItem')) {
+    //                 module.default.reveal(this.refs[refProp], skillItemConfig);
+    //             }
+    //         }
+    //     });
+    // }
 
     render() {
         // Array of components holding html for each skill item using data from graphql query.

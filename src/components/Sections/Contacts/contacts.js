@@ -6,36 +6,36 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 class Contacts extends Component {
-    componentDidMount() {
-        const titleConfig = {
-            ...this.props.defaultSR,
-            delay: 600,
-            origin: 'bottom',
-        };
+    // componentDidMount() {
+    //     const titleConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 600,
+    //         origin: 'bottom',
+    //     };
 
-        const textConfig = {
-            ...this.props.defaultSR,
-            delay: 800,
-            origin: 'left',
-        };
+    //     const textConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 800,
+    //         origin: 'left',
+    //     };
 
-        const linkConfig = {
-            ...this.props.defaultSR,
-            delay: 1000,
-            origin: 'left',
-        };
+    //     const linkConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 1000,
+    //         origin: 'left',
+    //     };
 
-        import('../../../scrollReveal').then(module => {
-            module.default.reveal(this.refs.title, titleConfig);
-            module.default.reveal(this.refs.text, textConfig);
+    //     import('../../../scrollReveal').then(module => {
+    //         module.default.reveal(this.refs.title, titleConfig);
+    //         module.default.reveal(this.refs.text, textConfig);
 
-            for (const refProp of Object.keys(this.refs)) {
-                if (refProp.includes('link')) {
-                    module.default.reveal(this.refs[refProp], linkConfig);
-                }
-            }
-        });
-    }
+    //         for (const refProp of Object.keys(this.refs)) {
+    //             if (refProp.includes('link')) {
+    //                 module.default.reveal(this.refs[refProp], linkConfig);
+    //             }
+    //         }
+    //     });
+    // }
 
     render() {
         return (

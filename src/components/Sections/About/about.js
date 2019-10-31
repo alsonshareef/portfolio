@@ -8,31 +8,31 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 class About extends Component {
-    componentDidMount() {
-        const titleConfig = {
-            ...this.props.defaultSR,
-            delay: 600,
-            origin: 'bottom',
-        };
+    // componentDidMount() {
+    //     const titleConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 600,
+    //         origin: 'bottom',
+    //     };
 
-        const profileColumnConfig = {
-            ...this.props.defaultSR,
-            delay: 1000,
-            origin: 'left',
-        };
+    //     const profileColumnConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 1000,
+    //         origin: 'left',
+    //     };
 
-        const textColumnConfig = {
-            ...this.props.defaultSR,
-            delay: 1000,
-            origin: 'right',
-        };
+    //     const textColumnConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 1000,
+    //         origin: 'right',
+    //     };
 
-        import('../../../scrollReveal').then(module => {
-            module.default.reveal(this.refs.title, titleConfig);
-            module.default.reveal(this.refs.profileColumn, profileColumnConfig);
-            module.default.reveal(this.refs.textColumn, textColumnConfig);
-        });
-    }
+    //     import('../../../scrollReveal').then(module => {
+    //         module.default.reveal(this.refs.title, titleConfig);
+    //         module.default.reveal(this.refs.profileColumn, profileColumnConfig);
+    //         module.default.reveal(this.refs.textColumn, textColumnConfig);
+    //     });
+    // }
 
     render() {
         return (

@@ -3,31 +3,31 @@ import projectStyles from './projects.module.scss';
 import Img from 'gatsby-image';
 
 class Projects extends Component {
-    componentDidMount() {
-        const titleConfig = {
-            ...this.props.defaultSR,
-            delay: 600,
-            origin: 'bottom',
-        };
+    // componentDidMount() {
+    //     const titleConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 600,
+    //         origin: 'bottom',
+    //     };
 
-        const projectConfig = {
-            ...this.props.defaultSR,
-            delay: 1000,
-            origin: 'left',
-        };
+    //     const projectConfig = {
+    //         ...this.props.defaultSR,
+    //         delay: 1000,
+    //         origin: 'left',
+    //     };
 
-        import('../../../scrollReveal').then(module => {
-            // Title SR
-            module.default.reveal(this.refs.title, titleConfig);
+    //     import('../../../scrollReveal').then(module => {
+    //         // Title SR
+    //         module.default.reveal(this.refs.title, titleConfig);
 
-            // Project card SR
-            for (const refProp of Object.keys(this.refs)) {
-                if (refProp.includes('project')) {
-                    module.default.reveal(this.refs[refProp], projectConfig);
-                }
-            }
-        });
-    }
+    //         // Project card SR
+    //         for (const refProp of Object.keys(this.refs)) {
+    //             if (refProp.includes('project')) {
+    //                 module.default.reveal(this.refs[refProp], projectConfig);
+    //             }
+    //         }
+    //     });
+    // }
 
     render() {
         return (
