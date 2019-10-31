@@ -32,18 +32,18 @@ class Banner extends Component {
                 )}
             >
                 <div className={'hero-body'}>
-                    <div className="container has-text-centered-mobile">
+                    <div className="container ">
                         <h1
-                            className="title is-size-3-mobile is-size-2-tablet is-size-1-desktop"
+                            className="title has-text-centered-mobile is-size-1-desktop is-size-2-tablet is-size-3-mobile"
                             ref="title"
                         >
                             Hi, my name is{' '}
-                            <span className={bannerStyles.headingMain__name}>
+                            <span className={bannerStyles.headingMain_name}>
                                 Alson Shareef
                             </span>
                         </h1>
                         <h2
-                            className="subtitle is-size-5-mobile is-size-4-tablet is-size-3-desktop"
+                            className="subtitle has-text-centered-mobile is-size-3-desktop is-size-4-tablet is-size-5-mobile"
                             ref="subtitle"
                         >
                             I enjoy problem-solving and building meaningful
