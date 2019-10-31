@@ -8,13 +8,42 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 class About extends Component {
+    componentDidMount() {
+        const titleConfig = {
+            ...this.props.defaultSR,
+            delay: 600,
+            origin: 'bottom',
+        };
+
+        const profileColumnConfig = {
+            ...this.props.defaultSR,
+            delay: 1000,
+            origin: 'left',
+        };
+
+        const textColumnConfig = {
+            ...this.props.defaultSR,
+            delay: 1000,
+            origin: 'right',
+        };
+
+        import('../../../scrollReveal').then(module => {
+            module.default.reveal(this.refs.title, titleConfig);
+            module.default.reveal(this.refs.profileColumn, profileColumnConfig);
+            module.default.reveal(this.refs.textColumn, textColumnConfig);
+        });
+    }
+
     render() {
         return (
             <section
                 id="about"
                 className={['section', aboutStyles.about__page].join(' ')}
             >
-                <h3 className={['title', aboutStyles.title].join(' ')}>
+                <h3
+                    className={['title', aboutStyles.title].join(' ')}
+                    ref="title"
+                >
                     About Me
                 </h3>
                 <div className="container">
@@ -24,6 +53,7 @@ class About extends Component {
                                 'column has-text-centered',
                                 aboutStyles.profileColumn,
                             ].join(' ')}
+                            ref="profileColumn"
                         >
                             <div className={aboutStyles.img_container}>
                                 <Img
@@ -83,15 +113,17 @@ class About extends Component {
                                 'has-text-centered-mobile',
                                 aboutStyles.textColumn,
                             ].join(' ')}
+                            ref="textColumn"
                         >
                             <p>
                                 I'm a passionate Full-Stack Web Developer
                                 focused on consistent learning and pushing my
-                                boundaries to become a better problem-solver.
+                                boundaries in both my logical and creative sides
+                                to become a better problem-solver.
                             </p>
                             <p>
                                 I have been primarly focused on learning the
-                                JavaScript ecosystem and how to utilise these
+                                JavaScript ecosystem, and how to utilise these
                                 technologies to build clean, perfomant
                                 front-ends and robust back-ends.
                             </p>
