@@ -2,13 +2,8 @@
 @import './mixins';
 
 // CUSTOM COLORS //
-// light-mode
-$primary: #87a0a8;
-$secondary: #7ca2a9;
-$tertiary: #5d525b;
-$highlight-primary: #e4bc94;
-
-// dark-mode
+$primary: #15183e;
+$highlight-primary: #71c2b8;
 
 // CUSTOMIZED BULMA VARIABLES //
 
@@ -17,17 +12,17 @@ $navbar-background-color: $primary;
 $navbar-item-color: white;
 
 // :active
-$navbar-tab-active-color: $tertiary;
-$navbar-tab-active-border-bottom-color: $tertiary;
+$navbar-tab-active-color: $highlight-primary;
+$navbar-tab-active-border-bottom-color: $highlight-primary;
 
 // :hover
-$navbar-item-hover-color: $tertiary;
+$navbar-item-hover-color: $highlight-primary;
 $navbar-tab-hover-background-color: white;
-$navbar-tab-hover-border-bottom-color: white;
+$navbar-tab-hover-border-bottom-color: $highlight-primary;
 
 // ----- TITLE ----- //
-$title-color: $tertiary;
-$subtitle-color: $tertiary;
+$title-color: $primary;
+$subtitle-color: $primary;
 
 // ----- FOOTER ----- //
 $footer-padding: 1rem 1.5rem 1rem;
