@@ -1,5 +1,4 @@
-@import './_typography.scss';
-@import './mixins';
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 // CUSTOM COLORS //
 $primary: #15183e;
@@ -30,6 +29,9 @@ $footer-padding: 1rem 1.5rem 1rem;
 @import '~bulma/bulma.sass';
 
 // CUSTOM GLOBAL //
+body {
+    font-family: 'Nunito', sans-serif;
+}
 
 h3 {
     text-align: center;
