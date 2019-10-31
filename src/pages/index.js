@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import '../styles/index.scss';
 
 import Layout from '../components/UI/Layout/layout';
-import Head from '../components/Head/head';
+import SEO from '../components/SEO/SEO';
 import Banner from '../components/Sections/Banner/banner';
 import About from '../components/Sections/About/about';
 import Projects from '../components/Sections/Projects/projects';
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <div id="top" style={{ minHeight: '100vh' }} />
-            <Head title="Home" />
+            <SEO title="Home" />
             <Banner defaultSR={defaultSR} />
             <About defaultSR={defaultSR} data={data.profileImg.nodes} />
             <Skills defaultSR={defaultSR} data={data.skillsImgs.nodes} />
