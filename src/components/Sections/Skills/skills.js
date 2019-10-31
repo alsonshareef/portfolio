@@ -4,25 +4,70 @@ import skillsStyles from './skills.module.scss';
 import Img from 'gatsby-image';
 
 class Skills extends Component {
-    // // Array of components holding html for each skill item using data from graphql query.
-    skillItems = this.props.data.map(node => (
-        <div className={['box', skillsStyles.skill_item].join(' ')}>
-            <div className={[skillsStyles.img_container].join(' ')}>
-                <Img fluid={node.childImageSharp.fluid} />
-            </div>
-            <p className="has-text-weight-semibold">
-                {node.name === 'Node' ? `${node.name}.js` : node.name}
-            </p>
-        </div>
-    ));
+    componentDidMount() {
+        const titleConfig = {
+            ...this.props.defaultSR,
+            delay: 600,
+            origin: 'bottom',
+        };
+
+        const subtitleConfig = {
+            ...this.props.defaultSR,
+            delay: 1000,
+            origin: 'left',
+        };
+
+        const skillItemConfig = {
+            ...this.props.defaultSR,
+            delay: 1200,
+            origin: 'bottom',
+        };
+
+        import('../../../scrollReveal').then(module => {
+            // Title SR
+            module.default.reveal(this.refs.title, titleConfig);
+
+            // Subtitle SR
+            for (const refProp of Object.keys(this.refs)) {
+                if (refProp.includes('subtitle')) {
+                    module.default.reveal(this.refs[refProp], subtitleConfig);
+                }
+            }
+
+            // Skill item SR
+            for (const refProp of Object.keys(this.refs)) {
+                if (refProp.includes('skillItem')) {
+                    module.default.reveal(this.refs[refProp], skillItemConfig);
+                }
+            }
+        });
+    }
 
     render() {
+        // Array of components holding html for each skill item using data from graphql query.
+        let skillItems = this.props.data.map((node, i) => (
+            <div
+                className={['box', skillsStyles.skill_item].join(' ')}
+                ref={`skillItem${i}`}
+            >
+                <div className={[skillsStyles.img_container].join(' ')}>
+                    <Img fluid={node.childImageSharp.fluid} />
+                </div>
+                <p className="has-text-weight-semibold is-size-5">
+                    {node.name === 'Node' ? `${node.name}.js` : node.name}
+                </p>
+            </div>
+        ));
+
         return (
             <section
                 className={['section', skillsStyles.skills__page].join(' ')}
                 id="skills"
             >
-                <h3 className={['title', skillsStyles.title].join(' ')}>
+                <h3
+                    className={['title', skillsStyles.title].join(' ')}
+                    ref="title"
+                >
                     Skills
                 </h3>
                 <div className="container">
@@ -33,15 +78,16 @@ class Skills extends Component {
                                     'subtitle is-4',
                                     skillsStyles.subtitle,
                                 ].join(' ')}
+                                ref="subtitle1"
                             >
                                 Front-End
                             </h4>
-                            {this.skillItems[7]}
-                            {this.skillItems[2]}
-                            {this.skillItems[12]}
-                            {this.skillItems[8]}
-                            {this.skillItems[11]}
-                            {this.skillItems[4]}
+                            {skillItems[7]}
+                            {skillItems[2]}
+                            {skillItems[12]}
+                            {skillItems[8]}
+                            {skillItems[11]}
+                            {skillItems[4]}
                         </div>
                         <div className="column">
                             <h4
@@ -49,11 +95,12 @@ class Skills extends Component {
                                     'subtitle is-4',
                                     skillsStyles.subtitle,
                                 ].join(' ')}
+                                ref="subtitle2"
                             >
                                 Back-End
                             </h4>
-                            {this.skillItems[10]}
-                            {this.skillItems[3]}
+                            {skillItems[10]}
+                            {skillItems[3]}
                         </div>
                         <div className="column">
                             <h4
@@ -61,12 +108,13 @@ class Skills extends Component {
                                     'subtitle is-4',
                                     skillsStyles.subtitle,
                                 ].join(' ')}
+                                ref="subtitle3"
                             >
                                 Databases / Tooling
                             </h4>
-                            {this.skillItems[9]}
-                            {this.skillItems[14]}
-                            {this.skillItems[6]}
+                            {skillItems[9]}
+                            {skillItems[14]}
+                            {skillItems[6]}
                         </div>
                         <div className="column">
                             <h4
@@ -74,13 +122,14 @@ class Skills extends Component {
                                     'subtitle is-4',
                                     skillsStyles.subtitle,
                                 ].join(' ')}
+                                ref="subtitle4"
                             >
                                 Build-Tools
                             </h4>
-                            {this.skillItems[1]}
-                            {this.skillItems[0]}
-                            {this.skillItems[13]}
-                            {this.skillItems[5]}
+                            {skillItems[1]}
+                            {skillItems[0]}
+                            {skillItems[13]}
+                            {skillItems[5]}
                         </div>
                     </div>
                 </div>
