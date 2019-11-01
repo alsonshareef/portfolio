@@ -42,7 +42,7 @@ const Header = () => {
                 <div className="navbar-brand">
                     <AnchorLink
                         onClick={() => toggleActive(false)}
-                        className="navbar-item is-size-3-touch is-size-2-desktop"
+                        className="navbar-item is-size-6-touch is-size-5-desktop"
                         offset={() => 900}
                         href="#top"
                     >
