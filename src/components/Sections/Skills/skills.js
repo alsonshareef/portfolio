@@ -43,12 +43,13 @@ class Skills extends Component {
     //     });
     // }
 
-    render() {
-        // Array of components holding html for each skill item using data from graphql query.
+    filterItems = () => {
+        // 1. Create an array of skill item divs
         let skillItems = this.props.data.map((node, i) => (
             <div
                 className={['box', skillsStyles.skill_item].join(' ')}
                 ref={`skillItem${i}`}
+                key={i}
             >
                 <div className={[skillsStyles.img_container].join(' ')}>
                     <Img fluid={node.childImageSharp.fluid} />
@@ -59,6 +60,84 @@ class Skills extends Component {
             </div>
         ));
 
+        // 2. Filter each skill item into their respective category
+
+        // -- Arrays to store filtered items.
+        let filteredFrontEnd = [],
+            filteredBackEnd = [],
+            filteredDatabase = [],
+            filteredBuildTool = [];
+
+        // -- Arrays storing order of each items list.
+        let frontEndOrder = [
+                'HTML5',
+                'CSS',
+                'Sass',
+                'Javascript',
+                'React',
+                'Gatsby',
+            ],
+            backEndOrder = ['Node.js', 'Express'],
+            databaseOrder = ['MongoDB', 'PostgreSQL', 'GraphQL'],
+            buildToolOrder = ['Webpack', 'Babel', 'npm', 'Github'];
+
+        // -- Front-end filtering
+        for (let i = 0; i < frontEndOrder.length; i++) {
+            for (let j = 0; j < skillItems.length; j++) {
+                if (
+                    skillItems[j].props.children[1].props.children ===
+                    frontEndOrder[i]
+                ) {
+                    filteredFrontEnd.push(skillItems[j]);
+                }
+            }
+        }
+
+        // -- Back-end filtering
+        for (let i = 0; i < backEndOrder.length; i++) {
+            for (let j = 0; j < skillItems.length; j++) {
+                if (
+                    skillItems[j].props.children[1].props.children ===
+                    backEndOrder[i]
+                ) {
+                    filteredBackEnd.push(skillItems[j]);
+                }
+            }
+        }
+
+        // -- Database filtering
+        for (let i = 0; i < databaseOrder.length; i++) {
+            for (let j = 0; j < skillItems.length; j++) {
+                if (
+                    skillItems[j].props.children[1].props.children ===
+                    databaseOrder[i]
+                ) {
+                    filteredDatabase.push(skillItems[j]);
+                }
+            }
+        }
+
+        // -- Build-Tool filtering
+        for (let i = 0; i < buildToolOrder.length; i++) {
+            for (let j = 0; j < skillItems.length; j++) {
+                if (
+                    skillItems[j].props.children[1].props.children ===
+                    buildToolOrder[i]
+                ) {
+                    filteredBuildTool.push(skillItems[j]);
+                }
+            }
+        }
+
+        return {
+            frontEnd: filteredFrontEnd,
+            backEnd: filteredBackEnd,
+            databases: filteredDatabase,
+            buildTools: filteredBuildTool,
+        };
+    };
+
+    render() {
         return (
             <section
                 className={['section', skillsStyles.skills__page].join(' ')}
@@ -82,12 +161,7 @@ class Skills extends Component {
                             >
                                 Front-End
                             </h4>
-                            {skillItems[7]}
-                            {skillItems[2]}
-                            {skillItems[12]}
-                            {skillItems[8]}
-                            {skillItems[11]}
-                            {skillItems[4]}
+                            {this.filterItems().frontEnd}
                         </div>
                         <div className="column">
                             <h4
@@ -99,8 +173,7 @@ class Skills extends Component {
                             >
                                 Back-End
                             </h4>
-                            {skillItems[10]}
-                            {skillItems[3]}
+                            {this.filterItems().backEnd}
                         </div>
                         <div className="column">
                             <h4
@@ -112,9 +185,7 @@ class Skills extends Component {
                             >
                                 Databases / Tooling
                             </h4>
-                            {skillItems[9]}
-                            {skillItems[14]}
-                            {skillItems[6]}
+                            {this.filterItems().databases}
                         </div>
                         <div className="column">
                             <h4
@@ -126,10 +197,7 @@ class Skills extends Component {
                             >
                                 Build-Tools
                             </h4>
-                            {skillItems[1]}
-                            {skillItems[0]}
-                            {skillItems[13]}
-                            {skillItems[5]}
+                            {this.filterItems().buildTools}
                         </div>
                     </div>
                 </div>
